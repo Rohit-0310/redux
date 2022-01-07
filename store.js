@@ -50,7 +50,7 @@ const store = new Store(reducer, init); // Fixed
 console.log(store.getState());
 
 store.dispatch({type: "INC_COUNT", payload: 1})
-store.dispatch({type: "INC_COUNT", payload: 1})
+store.dispatch({type: "INC_COUNT", payload: 10})
 
 console.log(store.getState());
 
@@ -61,5 +61,8 @@ console.log(store.getState());
 store.dispatch({
     type: "ADD_TODO", 
     payload: {title: "Learn React", status: false}})
+store.dispatch({
+    type: "ADD_TODO", 
+    payload: {title: "Learn Redux", status: false}})
 
 console.log(store.getState());
