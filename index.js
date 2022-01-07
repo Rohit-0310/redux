@@ -34,6 +34,8 @@ const reducer = (state, {type, payload}) => {
             return { ...state, count: state.count + payload }
         case "DEC_COUNT":
             return { ...state, count: state.count - payload }
+        case "ADD_TODO":
+            return{ ...state, todo: [...state.todo, payload]};
         default:
             return state;
             }
@@ -41,7 +43,7 @@ const reducer = (state, {type, payload}) => {
     
 // };
 
-const init = { count: 0 };
+const init = { count: 0 , todo: [] };
 
 const store = new Store(reducer, init); // Fixed
 
@@ -53,5 +55,11 @@ store.dispatch({type: "INC_COUNT", payload: 1})
 console.log(store.getState());
 
 store.dispatch({type: "DEC_COUNT", payload: 1})
+
+console.log(store.getState());
+
+store.dispatch({
+    type: "ADD_TODO", 
+    payload: {title: "Learn React", status: false}})
 
 console.log(store.getState());
