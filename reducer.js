@@ -1,3 +1,5 @@
+import { INC_COUNT } from "./actionTypes.js";
+import { DEC_COUNT } from "./actionTypes.js"
 export const reducer = (state, {type, payload}) => {
     // if (action.type === "INC_COUNT") {state.count = state.count + action.payload}
 
