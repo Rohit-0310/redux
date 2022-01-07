@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Rohit-0310/redux.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",

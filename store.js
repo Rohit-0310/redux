@@ -1,6 +1,6 @@
-const incCountAction = { type: "INC_COUNT", payload: 1}; //Flux Fixed
+// const incCountAction = { type: "INC_COUNT", payload: 1}; //Flux Fixed
 
-const decCountAction = { type: "DEC_COUNT", payload: 1}; //Flux Fixed
+// const decCountAction = { type: "DEC_COUNT", payload: 1}; //Flux Fixed
 
 
 const addTodoAction = { 
@@ -22,12 +22,19 @@ class Store {
         this.state = this.reducer(this.state, action)
     }
 }
-
+/*
 //Pure Function
 //Fixed
 // const reducer = (state, action) => {
-const reducer = (state, {type, payload}) => {
     // if (action.type === "INC_COUNT") {state.count = state.count + action.payload}
+
+// };
+
+
+*/
+
+/*
+const reducer = (state, {type, payload}) => {
 
     switch(type){
         case "INC_COUNT":
@@ -40,8 +47,7 @@ const reducer = (state, {type, payload}) => {
             return state;
             }
     }
-    
-// };
+    */
 
 const init = { count: 0 , todo: [] };
 
