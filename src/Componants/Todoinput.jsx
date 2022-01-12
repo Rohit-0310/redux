@@ -12,7 +12,6 @@ import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 //style
-import "./todo.css";
 import { Button } from "../styled/Button";
 import { Input } from "../styled/Input";
 
