@@ -1,21 +1,23 @@
 import {
-  ADD_TODO,
-  ADD_TODO_ERROR,
-  ADD_TODO_LOADING,
-  ADD_TODO_SUCCESS,
-  GET_TODO_ERROR,
-  GET_TODO_LOADING,
-  GET_TODO_SUCCESS,
-  REMOVE_TODO,
-  TOGGLE_TODO,
+    ADD_TODO,
+    ADD_TODO_ERROR,
+    ADD_TODO_LOADING,
+    ADD_TODO_SUCCESS,
+    GET_TODO_ERROR,
+    GET_TODO_LOADING,
+    GET_TODO_SUCCESS,
+    REMOVE_TODO,
+    TOGGLE_TODO,
 } from "./actiontype";
 
 export const addTodo = (data) => {
-  return {
-    type: ADD_TODO,
-    payload: data,
-  };
+    return {
+        type: ADD_TODO,
+        payload: data,
+    };
 };
+
+
 export const addTodoLoading = () => {
   return {
     type: ADD_TODO_LOADING,
