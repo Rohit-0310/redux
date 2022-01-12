@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const MyButton = styled.button`
+export const Button = styled.button`
     /* CSS Syntex */
     color: ${(props) => (props.theme === "light" ? "#fe7e6d" : "#FEECE9")};
     background: ${(props) => (props.theme === "light" ? "#FEECE9" : "#fe7e6d")};;
