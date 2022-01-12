@@ -1,12 +1,12 @@
 import {
-  // addTodo,
-  addTodoError,
-  addTodoLoading,
-  addTodoSucces,
-  getTodoError,
-  getTodoLoading,
-  getTodoSuccess,
-  removeTodo,
+
+    addTodoError,
+    addTodoLoading,
+    addTodoSucces,
+    getTodoError,
+    getTodoLoading,
+    getTodoSuccess,
+    removeTodo,
 } from "../Redux/actions";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
@@ -14,6 +14,7 @@ import { useSelector } from "react-redux";
 //style
 import { Button } from "../styled/Button";
 import { Input } from "../styled/Input";
+import { Div } from "../styled/Div";
 
 export const TodoInput = () => {
     const [text, setText] = useState("");
@@ -91,13 +92,13 @@ export const TodoInput = () => {
             <Button onClick={handleData}>ADD TODO</Button>
             <div className="cont">
                 {todos.map((i) => (
-                    <div key={i.id}>
+                    <Div key={i.id}>
                         {i.title} -{i.status ? "Done" : "Not-Done"}
                         <Button onClick={() => handleDelete(i.id)}>Delete</Button>
                         <Button onClick={() => handleToggle(i.id, i.title, i.status)}>
                             Edit
                         </Button>
-                    </div>
+                    </Div>
                 ))}
             </div>
         </div>
