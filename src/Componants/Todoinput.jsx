@@ -11,8 +11,11 @@ import {
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+//style
 import "./todo.css";
 import { Button } from "../styled/Button";
+import { Input } from "../styled/Input";
+
 export const TodoInput = () => {
   const [text, setText] = useState("");
   const { loading, todos, error } = useSelector((state) => ({
@@ -81,7 +84,7 @@ export const TodoInput = () => {
     <h1>Something went wrong</h1>
   ) : (
     <div>
-      <input
+      <Input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
