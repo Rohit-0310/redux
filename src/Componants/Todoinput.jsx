@@ -61,7 +61,7 @@ export const TodoInput = () => {
     };
   
     const handleDelete = async (id) => {
-        let resp = await fetch(`http://localhost:3001/todos/${id}`, {
+        await fetch(`http://localhost:3001/todos/${id}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",
